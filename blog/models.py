@@ -18,7 +18,7 @@ class Post(models.Model):
     
     
     class Meta:
-        ordering = ["-created_on"]
+        ordering = ["created_on"]
     
     def __str__(self):
         return f"{self.title} | written by {self.author.first_name} {self.author.last_name}"
