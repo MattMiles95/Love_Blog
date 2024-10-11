@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'about',
 ]
 
-# Sit Constants
+# Constants
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
