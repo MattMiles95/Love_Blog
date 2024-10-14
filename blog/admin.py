@@ -5,6 +5,9 @@ from .models import Post, Comment
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """
+    Admin interface for the Post model using Django Admin and Summernote.
+    """
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on',)
