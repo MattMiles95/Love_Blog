@@ -43,9 +43,9 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     
     class Meta:
-        ordering = ["created_on"]
+        ordering = ["-created_on"]
     
     def __str__(self):
-        return f"{
+        return f"{self.created_on.strftime('%d/%m/%Y at %H:%M')} - {
             self.author.first_name} {self.author.last_name} commented on {
                 self.post.title}: '{self.body}'"
